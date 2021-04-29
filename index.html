@@ -143,23 +143,18 @@
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.25s">
-                <form id="contact-form" action="mailto:support@eselfmade.in" method="post" enctype="text/plain">
+                <form id="contact-form" action="mailto:support@eselfmade.in" method="get" enctype="text/plain"
+                      onsubmit="window.location.href = form.action + '?' + $(this).serialize();return false">
                     <div class="row">
                         <div class="col-lg-12">
-                            <fieldset>
-                                <input type="text" name="subject" placeholder="Subject" required aria-label="">
-                            </fieldset>
+                            <input type="text" name="subject" placeholder="Subject" required aria-label="">
                         </div>
                         <div class="col-lg-12">
-                            <fieldset>
-                                <textarea name="body" class="form-control" id="message" placeholder="Message" required
-                                          aria-label=""></textarea>
-                            </fieldset>
+                            <textarea name="body" class="form-control" id="message" placeholder="Message" required
+                                      aria-label=""></textarea>
                         </div>
                         <div class="col-lg-12 text-center">
-                            <fieldset>
-                                <button type="submit" id="form-submit" class="main-button">Send Message</button>
-                            </fieldset>
+                            <button type="submit" id="form-submit" class="main-button">Send Message</button>
                         </div>
                     </div>
                     <div class="contact-dec">
