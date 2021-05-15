@@ -18,10 +18,14 @@
     <meta property="og:image" content="https://help.eselfmade.in/sm.png">
     <meta property="og:type" content="article">
 
-    <script>(function (w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
-        var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!=='dataLayer'?'&l='+l:'';j.async = true;
-        j.src ='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T6MPXHJ');</script>
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+        var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l !== 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-T6MPXHJ');</script>
 
     <link rel="icon" href="/sm.png" type="image/png">
     <link rel="shortcut" href="/sm.png" type="image/png">
@@ -212,18 +216,18 @@
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.25s">
-                <form id="contact-form" action="mailto:support@eselfmade.in" method="get"
-                      onsubmit="window.location.href = form.action + '?' + $(this).serialize();return false">
+                <form id="contact-form" action="mailto:support@eselfmade.in" method="get">
                     <div class="row">
                         <div class="col-lg-12">
-                            <input type="text" name="subject" placeholder="Subject" required aria-label="">
+                            <input id="subject" name="subject" placeholder="Subject" required aria-label=""
+                                   oninput="mail()">
                         </div>
                         <div class="col-lg-12">
                             <textarea name="body" class="form-control" id="message" placeholder="Message" required
-                                      aria-label=""></textarea>
+                                      aria-label="" oninput="mail()"></textarea>
                         </div>
                         <div class="col-lg-12 text-center">
-                            <button type="submit" id="form-submit" class="main-button">Send Message</button>
+                            <a href id="form-submit" class="main-button">Send Message</a>
                         </div>
                     </div>
                     <div class="contact-dec">
@@ -249,6 +253,12 @@
 <link rel="stylesheet" href="assets/css/animated.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet">
+<script>
+    function mail() {
+        document.getElementById('form-submit')
+            .setAttribute('href', `mailto:support@eselfmade.in?subject=${encodeURIComponent(document.getElementById('subject').value)}&body=${encodeURIComponent(document.getElementById('message').value)}`)
+    }
+</script>
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/owl.js"></script>
