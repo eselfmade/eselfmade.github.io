@@ -18,7 +18,7 @@
           content="How to Request Wallet Amount? | Selfmade Help and Support Center | Find Help on various Topics in Selfmade">
     <meta property="og:image" content="https://help.eselfmade.in/sm.png">
     <meta property="og:type" content="article">
-
+    <!--@formatter:off-->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!=='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -31,6 +31,7 @@
         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
         ga('create','UA-149866723-1','auto');
         ga('send','pageview');
+        <!--@formatter:ofn-->
     </script>
     <link rel="icon" href="/sm.png" type="image/png">
     <link rel="shortcut" href="/sm.png" type="image/png">
@@ -200,10 +201,11 @@
 <link rel="stylesheet" href="../assets/css/theme.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet">
-<script src="../vendor/jquery/jquery.min.js"></script>
-<script src="../assets/js/animation.js"></script>
-<script src="../assets/js/theme.js"></script>
-<script id="dsq-count-scr" src="//selfmade-help.disqus.com/count.js" async></script>
+<script>
+    window.onload=function() {
+        document.getElementById('js-preloader').classList.add('loaded');
+    }
+</script>
 
 </body>
 </html>
