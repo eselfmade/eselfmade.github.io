@@ -208,14 +208,16 @@
 </footer>
 <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/theme.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet">
 <script src="../vendor/lazy/lazy.min.js"></script>
 <script>
     window.onload=function() {
         document.getElementById('js-preloader').classList.add('loaded');
         new LazyLoad({}).update();
     }
+    let link = document.createElement('link');
+    link.rel = "stylesheet";
+    link.href = "https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap";
+    document.body.append(link);
 </script>
 
 </body>

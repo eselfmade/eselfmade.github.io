@@ -60,12 +60,14 @@
                 }
             }
         }
-        </script>
+    </script>
 </head>
 
 <body>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6MPXHJ"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6MPXHJ"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
 <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
         <span class="dot"></span>
@@ -129,8 +131,10 @@
             </div>
             <div class="mb-4">
                 <h6 class="mb-2"><strong>2.</strong> Tap the User Icon at the top</h6>
-                <img class="lazy img-fluid d-none d-md-block" data-src="../assets/img/click-user-web.webp" alt="Click User Icon">
-                <img class="lazy img-fluid d-md-none" data-src="../assets/img/click-user-mobile.webp" alt="Click User Icon">
+                <img class="lazy img-fluid d-none d-md-block" data-src="../assets/img/click-user-web.webp"
+                     alt="Click User Icon">
+                <img class="lazy img-fluid d-md-none" data-src="../assets/img/click-user-mobile.webp"
+                     alt="Click User Icon">
             </div>
             <div class="mb-4">
                 <h6 class="mb-2"><strong>3.</strong> Tap the Forgot Password</h6>
@@ -147,14 +151,16 @@
                 </h6>
                 <div class="row">
                     <div class="col-md-4">
-                        <img class="lazy img-fluid" data-src="../assets/img/forgot-password-form.webp" alt="Forgot Password Form">
+                        <img class="lazy img-fluid" data-src="../assets/img/forgot-password-form.webp"
+                             alt="Forgot Password Form">
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 mb-4">
                     <h6 class="mb-2">If your details matches, you'll get this response</h6>
-                    <img class="lazy img-fluid" data-src="../assets/img/forgot-password-valid.webp" alt="forgot password valid">
+                    <img class="lazy img-fluid" data-src="../assets/img/forgot-password-valid.webp"
+                         alt="forgot password valid">
                 </div>
                 <div class="col-md-6 mb-4">
                     <h6 class="mb-2">If your details doesn't matches, you'll get this response</h6>
@@ -167,7 +173,8 @@
                 <h6 class="mb-2 text-danger">Note: This link will be valid only for 15 Minutes</h6>
                 <div class="row">
                     <div class="col-md-6">
-                        <img class="lazy img-fluid" data-src="../assets/img/password-reset-mail.webp" alt="forgot password mail">
+                        <img class="lazy img-fluid" data-src="../assets/img/password-reset-mail.webp"
+                             alt="forgot password mail">
                     </div>
                 </div>
             </div>
@@ -178,7 +185,8 @@
                 </h6>
                 <div class="row">
                     <div class="col-md-5">
-                        <img class="lazy img-fluid" data-src="../assets/img/password-reset-form.webp" alt="reset password form">
+                        <img class="lazy img-fluid" data-src="../assets/img/password-reset-form.webp"
+                             alt="reset password form">
                     </div>
                 </div>
             </div>
@@ -208,14 +216,16 @@
 </footer>
 <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/theme.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet">
 <script src="../vendor/lazy/lazy.min.js"></script>
 <script>
-    window.onload=function() {
+    window.onload = function () {
         document.getElementById('js-preloader').classList.add('loaded');
         new LazyLoad({}).update();
     }
+    let link = document.createElement('link');
+    link.rel = "stylesheet";
+    link.href = "https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap";
+    document.body.append(link);
 </script>
 </body>
 </html>
