@@ -145,9 +145,9 @@
                 <h6 class="mb-2"><strong>4.</strong> Tap "To Team" under Transfer</h6>
                 <div class="row">
                     <div class="col-md-4">
-                        <img class="img-fluid d-none d-md-block" src="../assets/img/transfer-to-team-web.webp"
+                        <img class="lazy img-fluid d-none d-md-block" data-src="../assets/img/transfer-to-team-web.webp"
                              alt="Account -> To Team">
-                        <img class="img-fluid d-md-none" src="../assets/img/transfer-to-team-mob.webp"
+                        <img class="lazy img-fluid d-md-none" data-src="../assets/img/transfer-to-team-mob.webp"
                              alt="Account -> To Team">
                     </div>
                 </div>
@@ -159,7 +159,7 @@
                 </h6>
                 <div class="row mb-2">
                     <div class="col-md-4">
-                        <img class="img-fluid" src="../assets/img/totp-not-configured.webp"
+                        <img class="lazy img-fluid" data-src="../assets/img/totp-not-configured.webp"
                              alt="TOTP not configured">
                     </div>
                 </div>
@@ -170,7 +170,7 @@
                 <h6 class="mb-2">If you've already configured Transaction Password, you can skip to step 7</h6>
                 <div class="row mb-2">
                     <div class="col-md-4">
-                        <img class="img-fluid" src="../assets/img/set-transaction-password-1.webp"
+                        <img class="lazy img-fluid" data-src="../assets/img/set-transaction-password-1.webp"
                              alt="Set Transaction Password">
                     </div>
                 </div>
@@ -178,18 +178,18 @@
                 <h6 class="mb-2">You'll receive an OTP to your registered Email</h6>
                 <div class="row mb-2">
                     <div class="col-md-6">
-                        <img class="img-fluid" src="../assets/img/transaction-otp-mail.webp"
+                        <img class="lazy img-fluid" data-src="../assets/img/transaction-otp-mail.webp"
                              alt="Transaction Password OTP Email">
                     </div>
                     <div class="col-md-6">
-                        <img class="img-fluid" src="../assets/img/enter-transaction-password-otp.webp"
+                        <img class="lazy img-fluid" data-src="../assets/img/enter-transaction-password-otp.webp"
                              alt="Transaction Password OTP">
                     </div>
                 </div>
                 <h6 class="mb-2">Enter the OTP received to your Mail and Tap Ok</h6>
                 <div class="row mb-2">
                     <div class="col-md-6">
-                        <img class="img-fluid" src="../assets/img/transaction-password-configured.webp"
+                        <img class="lazy img-fluid" data-src="../assets/img/transaction-password-configured.webp"
                              alt="Transaction Password Configured">
                     </div>
                 </div>
@@ -200,7 +200,7 @@
                 </h6>
                 <div class="row mb-2">
                     <div class="col-md-6">
-                        <img class="img-fluid" src="../assets/img/to-team-form.webp"
+                        <img class="lazy img-fluid" data-src="../assets/img/to-team-form.webp"
                              alt="Transaction Password Configured">
                     </div>
                 </div>
@@ -210,21 +210,21 @@
                     <div class="col-md-6 mb-4">
                         <h6 class="mb-2"><strong>8.</strong> Enter the Transaction Password you've already configured
                         </h6>
-                        <img class="img-fluid" src="../assets/img/enter-transaction-password.webp"
+                        <img class="lazy img-fluid" data-src="../assets/img/enter-transaction-password.webp"
                              alt="Enter Transaction Password">
                     </div>
                     <div class="col-md-6">
                         <h6 class="mb-2"><strong>9.</strong> Enter TOTP from your configured Authenticator Mobile
                             Application
                         </h6>
-                        <img class="img-fluid" src="../assets/img/enter-totp.webp" alt="Enter TOTP">
+                        <img class="lazy img-fluid" data-src="../assets/img/enter-totp.webp" alt="Enter TOTP">
                     </div>
                 </div>
                 <h6 class="mb-2">If you've entered the OTP correctly, the transaction will be done and you'll get
                     this response</h6>
                 <div class="row">
                     <div class="col-md-6">
-                        <img class="img-fluid" src="../assets/img/transaction-done.webp" alt="Transaction Done">
+                        <img class="lazy img-fluid" data-src="../assets/img/transaction-done.webp" alt="Transaction Done">
                     </div>
                 </div>
             </div>
@@ -245,9 +245,11 @@
 <link rel="stylesheet" href="../assets/css/theme.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet">
+<script src="../vendor/lazy/lazy.min.js"></script>
 <script>
     window.onload=function() {
         document.getElementById('js-preloader').classList.add('loaded');
+        new LazyLoad({}).update();
     }
 </script>
 

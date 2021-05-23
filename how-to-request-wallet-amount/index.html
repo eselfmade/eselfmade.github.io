@@ -154,9 +154,9 @@
                 </h6>
                 <div class="row mb-2">
                     <div class="col-md-4">
-                        <img class="img-fluid d-none d-md-block" src="../assets/img/wallet-request-request-web.webp"
+                        <img class="lazy img-fluid d-none d-md-block" data-src="../assets/img/wallet-request-request-web.webp"
                              alt="Wallet Request -> Request">
-                        <img class="img-fluid d-md-none" src="../assets/img/wallet-request-request-mob.webp"
+                        <img class="lazy img-fluid d-md-none" data-src="../assets/img/wallet-request-request-mob.webp"
                              alt="Wallet Request -> Request">
                     </div>
                 </div>
@@ -165,9 +165,9 @@
                 <h6 class="mb-2"><strong>3.</strong> Fill the Form and Submit it</h6>
                 <div class="row mb-2">
                     <div class="col-md-10">
-                        <img class="img-fluid d-none d-md-block" src="../assets/img/wallet-request-form-web.webp"
+                        <img class="lazy img-fluid d-none d-md-block" data-src="../assets/img/wallet-request-form-web.webp"
                              alt="Wallet Request Form">
-                        <img class="img-fluid d-md-none" src="../assets/img/wallet-request-form-mob.webp"
+                        <img class="lazy img-fluid d-md-none" data-src="../assets/img/wallet-request-form-mob.webp"
                              alt="Wallet Request Form">
                     </div>
                 </div>
@@ -179,9 +179,9 @@
                 </h6>
                 <div class="row mb-2">
                     <div class="col-md-4">
-                        <img class="img-fluid d-none d-md-block" src="../assets/img/wallet-request-view-web.webp"
+                        <img class="lazy img-fluid d-none d-md-block" data-src="../assets/img/wallet-request-view-web.webp"
                              alt="Wallet Request -> View">
-                        <img class="img-fluid d-md-none" src="../assets/img/wallet-request-view-mob.webp"
+                        <img class="lazy img-fluid d-md-none" data-src="../assets/img/wallet-request-view-mob.webp"
                              alt="Wallet Request -> View">
                     </div>
                 </div>
@@ -210,9 +210,11 @@
 <link rel="stylesheet" href="../assets/css/theme.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet">
+<script src="../vendor/lazy/lazy.min.js"></script>
 <script>
     window.onload=function() {
         document.getElementById('js-preloader').classList.add('loaded');
+        new LazyLoad({}).update();
     }
 </script>
 

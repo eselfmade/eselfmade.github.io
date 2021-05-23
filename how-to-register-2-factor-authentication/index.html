@@ -176,9 +176,9 @@
                 </h6>
                 <div class="row">
                     <div class="col-md-4">
-                        <img class="img-fluid d-none d-md-block" src="../assets/img/account-2-factor-web.webp"
+                        <img class="lazy img-fluid d-none d-md-block" data-src="../assets/img/account-2-factor-web.webp"
                              alt="Account -> 2 Factor">
-                        <img class="img-fluid d-md-none" src="../assets/img/account-2-factor-mob.webp"
+                        <img class="lazy img-fluid d-md-none" data-src="../assets/img/account-2-factor-mob.webp"
                              alt="Account -> 2 Factor">
                     </div>
                 </div>
@@ -188,14 +188,14 @@
                     <div class="col-md-4 mb-2">
                         <h6 class="mb-2"><strong>3. </strong>If you have already configured Two Factor, TOTP, you'll see
                             this image</h6>
-                        <img class="img-fluid" src="../assets/img/totp-turned-on.webp"
+                        <img class="lazy img-fluid" data-src="../assets/img/totp-turned-on.webp"
                              alt="TOTP Turned On">
                     </div>
                     <div class="col-md-8">
                         <h6 class="mb-2">If you haven't configured, you'll see this</h6>
-                        <img class="img-fluid d-none d-md-block" src="../assets/img/totp-turned-off-web.webp"
+                        <img class="lazy img-fluid d-none d-md-block" data-src="../assets/img/totp-turned-off-web.webp"
                              alt="TOTP Turned Off">
-                        <img class="img-fluid d-md-none" src="../assets/img/totp-turned-off-mob.webp"
+                        <img class="lazy img-fluid d-md-none" data-src="../assets/img/totp-turned-off-mob.webp"
                              alt="TOTP Turned Off">
                     </div>
                 </div>
@@ -210,9 +210,9 @@
                 </h6>
                 <div class="row mb-2">
                     <div class="col-md-8">
-                        <img class="img-fluid d-none d-md-block" src="../assets/img/totp-qr-web.webp"
+                        <img class="lazy img-fluid d-none d-md-block" data-src="../assets/img/totp-qr-web.webp"
                              alt="TOTP QR Authentication">
-                        <img class="img-fluid d-md-none" src="../assets/img/open-google-authenticator.webp"
+                        <img class="lazy img-fluid d-md-none" data-src="../assets/img/open-google-authenticator.webp"
                              alt="TOTP QR Authentication">
                     </div>
                 </div>
@@ -226,12 +226,12 @@
                 <div class="row">
                     <div class="col-md-6">
                         <h6 class="mb-2">If you enter a wrong TOTP, you'll get this response</h6>
-                        <img class="img-fluid" src="../assets/img/totp-invalid.webp"
+                        <img class="lazy img-fluid" data-src="../assets/img/totp-invalid.webp"
                              alt="Invalid TOTP">
                     </div>
                     <div class="col-md-6">
                         <h6 class="mb-2">If you entered the Correct TOTP, you'll get this response</h6>
-                        <img class="img-fluid" src="../assets/img/totp-configured.webp"
+                        <img class="lazy img-fluid" data-src="../assets/img/totp-configured.webp"
                              alt="TOTP Configured">
                     </div>
                 </div>
@@ -261,9 +261,11 @@
 <link rel="stylesheet" href="../assets/css/theme.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet">
+<script src="../vendor/lazy/lazy.min.js"></script>
 <script>
     window.onload=function() {
         document.getElementById('js-preloader').classList.add('loaded');
+        new LazyLoad({}).update();
     }
 </script>
 </body>

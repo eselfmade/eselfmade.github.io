@@ -136,9 +136,9 @@
                 </h6>
                 <div class="row">
                     <div class="col-md-4">
-                        <img class="img-fluid d-none d-md-block" src="../assets/img/account-bank-web.webp"
+                        <img class="lazy img-fluid d-none d-md-block" data-src="../assets/img/account-bank-web.webp"
                              alt="account -> bank">
-                        <img class="img-fluid d-md-none" src="../assets/img/account-bank-mobile.webp"
+                        <img class="lazy img-fluid d-md-none" data-src="../assets/img/account-bank-mobile.webp"
                              alt="account -> bank">
                     </div>
                 </div>
@@ -152,7 +152,7 @@
                 </h6>
                 <div class="row">
                     <div class="col-md-4">
-                        <img class="img-fluid" src="../assets/img/bank.webp" alt="bank">
+                        <img class="lazy img-fluid" data-src="../assets/img/bank.webp" alt="bank">
                     </div>
                 </div>
             </div>
@@ -162,9 +162,9 @@
                 </h6>
                 <div class="row">
                     <div class="col-md-4">
-                        <img class="img-fluid d-none d-md-block" src="../assets/img/account-kyc-web.webp"
+                        <img class="lazy img-fluid d-none d-md-block" data-src="../assets/img/account-kyc-web.webp"
                              alt="account -> KYC">
-                        <img class="img-fluid d-md-none" src="../assets/img/account-kyc-mobile.webp"
+                        <img class="lazy img-fluid d-md-none" data-src="../assets/img/account-kyc-mobile.webp"
                              alt="account -> KYC">
                     </div>
                 </div>
@@ -173,10 +173,10 @@
                 <h6 class="mb-2"><strong>5.</strong> Upload your Bank Pass Book photo and PAN Card photo</h6>
                 <div class="row">
                     <div class="col-md-6 mb-2">
-                        <img src="../assets/img/upload-passbook.webp" class="img-fluid" alt="Upload Passbook">
+                        <img data-src="../assets/img/upload-passbook.webp" class="lazy img-fluid" alt="Upload Passbook">
                     </div>
                     <div class="col-md-6">
-                        <img src="../assets/img/upload-pan.webp" class="img-fluid" alt="Upload PAN">
+                        <img data-src="../assets/img/upload-pan.webp" class="lazy img-fluid" alt="Upload PAN">
                     </div>
                 </div>
                 <h6 class="mb-2 text-danger">Note: The images should be less than 1MB</h6>
@@ -196,10 +196,10 @@
                 </ul>
                 <div class="row">
                     <div class="col-md-6 mb-2">
-                        <img class="img-fluid" src="../assets/img/update-kyc.webp" alt="update KYC">
+                        <img class="lazy img-fluid" data-src="../assets/img/update-kyc.webp" alt="update KYC">
                     </div>
                     <div class="col-md-6">
-                        <img class="img-fluid" src="../assets/img/passbook-not-clear.webp" alt="passbook not clear">
+                        <img class="lazy img-fluid" data-src="../assets/img/passbook-not-clear.webp" alt="passbook not clear">
                     </div>
                 </div>
             </div>
@@ -220,9 +220,11 @@
 <link rel="stylesheet" href="../assets/css/theme.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet">
+<script src="../vendor/lazy/lazy.min.js"></script>
 <script>
     window.onload = function () {
         document.getElementById('js-preloader').classList.add('loaded');
+        new LazyLoad({}).update();
     }
 </script>
 

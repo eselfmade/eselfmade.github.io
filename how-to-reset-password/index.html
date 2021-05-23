@@ -129,14 +129,14 @@
             </div>
             <div class="mb-4">
                 <h6 class="mb-2"><strong>2.</strong> Tap the User Icon at the top</h6>
-                <img class="img-fluid d-none d-md-block" src="../assets/img/click-user-web.webp" alt="Click User Icon">
-                <img class="img-fluid d-md-none" src="../assets/img/click-user-mobile.webp" alt="Click User Icon">
+                <img class="lazy img-fluid d-none d-md-block" data-src="../assets/img/click-user-web.webp" alt="Click User Icon">
+                <img class="lazy img-fluid d-md-none" data-src="../assets/img/click-user-mobile.webp" alt="Click User Icon">
             </div>
             <div class="mb-4">
                 <h6 class="mb-2"><strong>3.</strong> Tap the Forgot Password</h6>
                 <div class="row">
                     <div class="col-md-6">
-                        <img class="img-fluid" src="../assets/img/click-forgot-password.webp"
+                        <img class="lazy img-fluid" data-src="../assets/img/click-forgot-password.webp"
                              alt="Click Forgot Password">
                     </div>
                 </div>
@@ -147,18 +147,18 @@
                 </h6>
                 <div class="row">
                     <div class="col-md-4">
-                        <img class="img-fluid" src="../assets/img/forgot-password-form.webp" alt="Forgot Password Form">
+                        <img class="lazy img-fluid" data-src="../assets/img/forgot-password-form.webp" alt="Forgot Password Form">
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 mb-4">
                     <h6 class="mb-2">If your details matches, you'll get this response</h6>
-                    <img class="img-fluid" src="../assets/img/forgot-password-valid.webp" alt="forgot password valid">
+                    <img class="lazy img-fluid" data-src="../assets/img/forgot-password-valid.webp" alt="forgot password valid">
                 </div>
                 <div class="col-md-6 mb-4">
                     <h6 class="mb-2">If your details doesn't matches, you'll get this response</h6>
-                    <img class="img-fluid" src="../assets/img/forgot-password-invalid.webp"
+                    <img class="lazy img-fluid" data-src="../assets/img/forgot-password-invalid.webp"
                          alt="forgot password invalid">
                 </div>
             </div>
@@ -167,7 +167,7 @@
                 <h6 class="mb-2 text-danger">Note: This link will be valid only for 15 Minutes</h6>
                 <div class="row">
                     <div class="col-md-6">
-                        <img class="img-fluid" src="../assets/img/password-reset-mail.webp" alt="forgot password mail">
+                        <img class="lazy img-fluid" data-src="../assets/img/password-reset-mail.webp" alt="forgot password mail">
                     </div>
                 </div>
             </div>
@@ -178,7 +178,7 @@
                 </h6>
                 <div class="row">
                     <div class="col-md-5">
-                        <img class="img-fluid" src="../assets/img/password-reset-form.webp" alt="reset password form">
+                        <img class="lazy img-fluid" data-src="../assets/img/password-reset-form.webp" alt="reset password form">
                     </div>
                 </div>
             </div>
@@ -186,7 +186,7 @@
                 <h6 class="mb-2">If your details matches, you'll get this response</h6>
                 <div class="row mb-4">
                     <div class="col-md-6">
-                        <img class="img-fluid" src="../assets/img/password-reset-success.webp"
+                        <img class="lazy img-fluid" data-src="../assets/img/password-reset-success.webp"
                              alt="reset password success">
                     </div>
                 </div>
@@ -210,9 +210,11 @@
 <link rel="stylesheet" href="../assets/css/theme.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet">
+<script src="../vendor/lazy/lazy.min.js"></script>
 <script>
     window.onload=function() {
         document.getElementById('js-preloader').classList.add('loaded');
+        new LazyLoad({}).update();
     }
 </script>
 </body>

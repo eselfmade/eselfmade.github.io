@@ -126,12 +126,15 @@
         <div class="col">
             <div class="mb-2">
                 <h6>
-                    <strong>1.</strong> Goto <a href="https://eselfmade.in/register?utm_source=selfmade&utm_medium=help">https://eselfmade.in/register</a>
+                    <strong>1.</strong> Goto <a
+                        href="https://eselfmade.in/register?utm_source=selfmade&utm_medium=help">https://eselfmade.in/register</a>
                 </h6>
             </div>
             <div>
-                <img class="img-fluid d-none d-md-block" src="../assets/img/register.webp" alt="New User Registration">
-                <img class="img-fluid d-md-none" src="../assets/img/register-mobile.webp" alt="New User Registration">
+                <img class="lazy img-fluid d-none d-md-block" data-data-src="../assets/img/register.webp"
+                     alt="New User Registration">
+                <img class="lazy img-fluid d-md-none" data-data-src="../assets/img/register-mobile.webp"
+                     alt="New User Registration">
             </div>
         </div>
     </div>
@@ -145,7 +148,8 @@
             </div>
             <div class="row mb-2">
                 <div class="col-md-6">
-                    <img class="img-fluid" src="../assets/img/register-success.webp" alt="New User Registration Success">
+                    <img class="lazy img-fluid" data-data-src="../assets/img/register-success.webp"
+                         alt="New User Registration Success">
                 </div>
             </div>
             <div>
@@ -169,9 +173,11 @@
 <link rel="stylesheet" href="../assets/css/theme.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet">
+<script src="../vendor/lazy/lazy.min.js"></script>
 <script>
-    window.onload=function() {
+    window.onload = function () {
         document.getElementById('js-preloader').classList.add('loaded');
+        new LazyLoad({}).update();
     }
 </script>
 
