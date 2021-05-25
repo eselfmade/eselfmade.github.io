@@ -63,8 +63,10 @@
 </head>
 
 <body>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6MPXHJ"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6MPXHJ"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
 <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
         <span class="dot"></span>
@@ -148,7 +150,8 @@
                 </h6>
                 <div class="row">
                     <div class="col">
-                        <img class="lazy img-fluid d-none d-md-block" data-src="../assets/img/purchase-history-list-web.webp"
+                        <img class="lazy img-fluid d-none d-md-block"
+                             data-src="../assets/img/purchase-history-list-web.webp"
                              alt="Purchase History">
                         <img class="lazy img-fluid d-md-none" data-src="../assets/img/purchase-history-list-mob.webp"
                              alt="Purchase History">
@@ -156,8 +159,10 @@
                 </div>
             </div>
             <div class="mb-4">
-                <h6 class="mb-2"><strong>4.</strong> Tap on the Tracking ID to track the current status of the Products</h6>
-                <h6 class="mb-2 d-md-none">Tap the <span class="bg-success text-white rounded rounded-circle px-1">+</span> icon to expand</h6>
+                <h6 class="mb-2"><strong>4.</strong> Tap on the Tracking ID to track the current status of the Products
+                </h6>
+                <h6 class="mb-2 d-md-none">Tap the <span
+                        class="bg-success text-white rounded rounded-circle px-1">+</span> icon to expand</h6>
                 <h6 class="mb-2">If the Status is Pending, then the products are not yet dispatched from our end.</h6>
             </div>
         </div>
@@ -175,10 +180,12 @@
 </footer>
 <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/theme.css">
+<script src="../vendor/lazy/lazy.min.js"></script>
 <script>
-    window.onload=function() {
+    window.onload = function () {
         document.getElementById('js-preloader').classList.add('loaded');
     }
+    new LazyLoad({}).update();
     let link = document.createElement('link');
     link.rel = "stylesheet";
     link.href = "https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap";
