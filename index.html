@@ -148,7 +148,8 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                            <img class="lazy img-fluid" src="assets/images/banner-right-image.webp"
+                            <img class="img-fluid" src="assets/images/banner-right-image.webp" loading="lazy"
+                                 width="622" height="591"
                                  alt="Get your Queries resolved at Selfmade Help and Support Center">
                         </div>
                     </div>
@@ -297,12 +298,12 @@
 <link rel="stylesheet" href="assets/css/theme.css">
 <link rel="stylesheet" href="assets/css/animated.css">
 
-<script src="vendor/lazy/lazy.min.js"></script>
 <script>
     function mail() {
         document.getElementById('form-submit')
             .setAttribute('href', `mailto:support@eselfmade.in?subject=${encodeURIComponent(document.getElementById('subject').value)}&body=${encodeURIComponent(document.getElementById('message').value)}`)
     }
+
     let link = document.createElement('link');
     link.rel = "stylesheet";
     link.href = "https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap";
@@ -312,7 +313,6 @@
 <script>
     window.onload = function () {
         document.getElementById('js-preloader').classList.add('loaded');
-        new LazyLoad({}).update();
     }
 </script>
 </body>
