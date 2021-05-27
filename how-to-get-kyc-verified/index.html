@@ -228,6 +228,30 @@
     link.rel = "stylesheet";
     link.href = "https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap";
     document.body.append(link);
+    let timer = null, toggled = false;
+    const controller = document.querySelector('.menu-trigger'), slider = document.querySelector('.header-area .nav');
+    controller.onclick = () => {
+        if (controller.classList.contains('active')) {
+            controller.classList.remove('active');
+            slider.style.display = '';
+        } else {
+            controller.classList.add('active');
+            slider.style.display = 'block';
+        }
+        let instanceheight = parseInt(slider.style.height);
+        let init = 1 * new Date();
+        let height = (toggled = !toggled) ? 200 : 20;
+        let display = height - parseInt(slider.style.height);
+        timer = setInterval(() => {
+            let instance = (1 * new Date()) - init;
+            if (instance <= 200) {
+                slider.style.height = instanceheight + Math.floor(display * instance / 200) + 'px';
+            } else {
+                slider.style.height = height + 'px';
+                clearInterval(timer);
+            }
+        }, 0);
+    };
 </script>
 
 </body>

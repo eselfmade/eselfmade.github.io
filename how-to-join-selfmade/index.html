@@ -131,10 +131,10 @@
                 </h6>
             </div>
             <div>
-                <img class="lazy img-fluid d-none d-md-block" data-data-src="../assets/img/register.webp"
-                     alt="New User Registration">
-                <img class="lazy img-fluid d-md-none" data-data-src="../assets/img/register-mobile.webp"
-                     alt="New User Registration">
+                <img class="lazy img-fluid d-none d-md-block" data-src="../assets/img/register.webp" width="1920"
+                     height="941" alt="New User Registration Form. Fill this form and am executive will get in touch with you in a day or 2">
+                <img class="lazy img-fluid d-md-none" data-src="../assets/img/register-mobile.webp"
+                     alt="New User Registration Form. Fill this form and am executive will get in touch with you in a day or 2">
             </div>
         </div>
     </div>
@@ -142,9 +142,17 @@
         <div class="col">
             <div class="mb-2">
                 <h6>
-                    <strong>2.</strong> Fill in your Name, Contact mobile number, Place (City) and select an option from
-                    the How did you hear about us? dropdown and tap the Register button
+                    <strong>2.</strong> Fill the following details
                 </h6>
+                <ol class="list-inline">
+                    <li>Name</li>
+                    <li>Contact Mobile Number</li>
+                    <li>Your City</li>
+                    <li>How did your hear about us?</li>
+                    <li>Your Occupation</li>
+                    <li>Your School or College or the Organization your work</li>
+                    <li>Select your reason to Join Selfmade</li>
+                </ol>
             </div>
             <div class="row mb-2">
                 <div class="col-md-6">
@@ -181,6 +189,30 @@
     link.rel = "stylesheet";
     link.href = "https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap";
     document.body.append(link);
+    let timer = null, toggled = false;
+    const controller = document.querySelector('.menu-trigger'), slider = document.querySelector('.header-area .nav');
+    controller.onclick = () => {
+        if (controller.classList.contains('active')) {
+            controller.classList.remove('active');
+            slider.style.display = '';
+        } else {
+            controller.classList.add('active');
+            slider.style.display = 'block';
+        }
+        let instanceheight = parseInt(slider.style.height);
+        let init = 1 * new Date();
+        let height = (toggled = !toggled) ? 200 : 20;
+        let display = height - parseInt(slider.style.height);
+        timer = setInterval(() => {
+            let instance = (1 * new Date()) - init;
+            if (instance <= 200) {
+                slider.style.height = instanceheight + Math.floor(display * instance / 200) + 'px';
+            } else {
+                slider.style.height = height + 'px';
+                clearInterval(timer);
+            }
+        }, 0);
+    };
 </script>
 
 </body>

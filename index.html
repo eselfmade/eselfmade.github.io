@@ -19,7 +19,7 @@
     <meta property="og:type" content="article">
     <!--@formatter:off-->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            new Date().getTime(),event:'gtm.js'});let f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!=='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-T6MPXHJ');</script>
@@ -311,9 +311,33 @@
 </script>
 <script src="assets/js/animation.js"></script>
 <script>
-    window.onload = function () {
+    window.onload = () => {
         document.getElementById('js-preloader').classList.add('loaded');
     }
+    let timer = null, toggled = false;
+    const controller = document.querySelector('.menu-trigger'), slider = document.querySelector('.header-area .nav');
+    controller.onclick = () => {
+        if (controller.classList.contains('active')) {
+            controller.classList.remove('active');
+            slider.style.display = '';
+        } else {
+            controller.classList.add('active');
+            slider.style.display = 'block';
+        }
+        let instanceheight = parseInt(slider.style.height);
+        let init = 1 * new Date();
+        let height = (toggled = !toggled) ? 200 : 20;
+        let display = height - parseInt(slider.style.height);
+        timer = setInterval(() => {
+            let instance = (1 * new Date()) - init;
+            if (instance <= 200) {
+                slider.style.height = instanceheight + Math.floor(display * instance / 200) + 'px';
+            } else {
+                slider.style.height = height + 'px';
+                clearInterval(timer);
+            }
+        }, 0);
+    };
 </script>
 </body>
 </html>
