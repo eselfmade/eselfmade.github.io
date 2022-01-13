@@ -265,18 +265,36 @@
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.25s">
-                <form id="contact-form" method="get">
+                <form id="contact-form" action="https://desk.eselfmade.in/support/WebToCase" method="POST"
+                      encType='multipart/form-data'>
+                    <input type="hidden" name="xnQsjsdp" value="edbsnc31f18f85249e6740146c1bbd671d001">
+                    <input type="hidden" name="xmIwtLD"
+                           value="edbsn756e870f5ef9cee8029a8adc14814903af1f7d2fea9bbf2e090f231e102d1a0d">
+                    <input type="hidden" name="xJdfEaS" value="">
+                    <input type="hidden" name="actionType" value="Q2FzZXM=">
+                    <input type="hidden" value="Cases">
+                    <input type="hidden"
+                           value="&#x7b;&quot;JSON_VALUES&quot;&#x3a;&#x7b;&#x7d;,&quot;JSON_SELECT_VALUES&quot;&#x3a;&#x7b;&#x7d;,&quot;JSON_MAP_DEP_LABELS&quot;&#x3a;&#x5b;&#x5d;&#x7d;"/>
+                    <input type="hidden" name="returnURL" value="https://help.eselfmade.in">
                     <div class="row">
                         <div class="col-lg-12">
-                            <input name="subject" class="form-control" id="subject" placeholder="Subject" required
-                                   aria-label="" oninput="mail()">
+                            <input maxLength="120" name="Contact Name" class="form-control" placeholder="Contact Name"
+                                   required aria-label="">
                         </div>
                         <div class="col-lg-12">
-                            <textarea name="body" class="form-control" id="message" placeholder="Message" required
-                                      aria-label="" oninput="mail()"></textarea>
+                            <input type="email" maxLength="120" name="Email" class="form-control" placeholder="Email"
+                                   required aria-label="">
+                        </div>
+                        <div class="col-lg-12">
+                            <input maxLength="255" name="Subject" class="form-control" placeholder="Subject" required
+                                   aria-label="">
+                        </div>
+                        <div class="col-lg-12">
+                            <textarea name="Description" maxLength="3000" class="form-control" placeholder="Message"
+                                      required aria-label=""></textarea>
                         </div>
                         <div class="col-lg-12 text-center">
-                            <a href id="form-submit" class="main-button">Send Message</a>
+                            <button type="submit" id="form-submit" class="main-button">Send Message</button>
                         </div>
                     </div>
                 </form>
@@ -299,11 +317,6 @@
 <link rel="stylesheet" href="assets/css/animated.css">
 
 <script>
-    function mail() {
-        document.getElementById('form-submit')
-            .setAttribute('href', `mailto:support@eselfmade.in?subject=${encodeURIComponent(document.getElementById('subject').value)}&body=${encodeURIComponent(document.getElementById('message').value)}`)
-    }
-
     let link = document.createElement('link');
     link.rel = "stylesheet";
     link.href = "https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap";
