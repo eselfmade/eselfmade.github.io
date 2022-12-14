@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://help.eselfmade.in/sitemap.xml
+Sitemap: http://help.selfmade4u.com/sitemap.xml
